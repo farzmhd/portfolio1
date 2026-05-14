@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Farz | Premium Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Glow Effect -->
+  <div class="bg-glow"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="nav-logo"><span class="text-accent"></span></a>
+
+      <button class="menu-btn" id="menuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-item">Home</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#skills" class="nav-item">Skills</a></li>
+        <li><a href="#projects" class="nav-item">Projects</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="section">
+    <div class="container">
+      <div class="hero-content reveal active">
+        <span class="hero-subtitle">Building Seamless experiences</span>
+        <h1 class="hero-title">I'm <span class="text-accent">Faraz</span><br>UI/UX Designer.</h1>
+        <p class="hero-desc">I design intuitive, user centered digital experiences that blend creativity with functionality.
+From wireframes to polished interfaces, I turn ideas into seamless, engaging, and impactful designs.</p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-outline">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container reveal">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-img-wrapper reveal delay-1">
+          <img src="farz.jpeg" alt="Farz" class="about-img">
+        </div>
+        <div class="about-text reveal delay-2">
+          <p>I’m a creative UI/UX Designer and Frontend Developer passionate about building modern, visually engaging, and user-friendly digital experiences. With skills in Graphic Design, VFX, and Frontend Development using HTML, CSS, and JavaScript, I combine creativity with clean code to craft seamless and interactive websites.</p>
+          <p>My focus is on designing intuitive user interfaces, smooth user experiences, and responsive layouts that work beautifully across all devices. I enjoy transforming ideas into polished digital products through wireframing, prototyping, and modern design principles while bringing them to life with efficient frontend development.</p>
+          <p>From sleek portfolio websites to interactive web interfaces, I aim to create experiences that are not only aesthetically strong but also fast, functional, and impactful. I’m constantly exploring new trends in UI/UX and web technologies to improve my craft and deliver high-quality digital experiences.</p>
+
+          <div style="margin-top: 2.5rem;">
+            <a href="#" class="btn btn-outline">Download Resume <i class="fas fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container reveal">
+      <h2>My Expertise</h2>
+
+      <div class="skills-grid">
+        <!-- Skill 1 -->
+        <div class="skill-card premium-card reveal delay-1">
+          <div class="card-content">
+            <div class="skill-icon text-accent">
+              <i class="fas fa-code"></i>
+            </div>
+            <h4>Frontend Engineering</h4>
+            <p>Architecting responsive, accessible, and highly performant web applications using modern HTML5, CSS3,
+              JavaScript (ES6+), and modern frameworks.</p>
+          </div>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="skill-card premium-card reveal delay-2">
+          <div class="card-content">
+            <div class="skill-icon text-accent">
+              <i class="fas fa-pen-nib"></i>
+            </div>
+            <h4>UI/UX Design</h4>
+            <p>Crafting intuitive and aesthetically pleasing user journeys. Translating complex requirements into elegant,
+              user-centric interfaces.</p>
+          </div>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="skill-card premium-card reveal delay-3">
+          <div class="card-content">
+            <div class="skill-icon text-accent">
+              <i class="fas fa-magic"></i>
+            </div>
+            <h4>VFX & Animation</h4>
+            <p>Enhancing digital experiences with micro-interactions, complex CSS animations, and visual effects to create
+              engaging web environments.</p>
+          </div>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="skill-card premium-card reveal delay-1">
+          <div class="card-content">
+            <div class="skill-icon text-accent">
+              <i class="fas fa-vector-square"></i>
+            </div>
+            <h4>Graphic Design</h4>
+            <p>Expertise in visual storytelling, typography, and color theory using Adobe Creative Suite (Photoshop,
+              Illustrator, InDesign, Premiere Pro).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container reveal">
+      <h2>Featured Work</h2>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card premium-card reveal delay-1">
+          <div class="card-content" style="padding: 0; display: flex; flex-direction: column; height: 100%;">
+            <div class="project-img-container">
+              <img src="portfolio.svg" alt="Project 1" class="project-img">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Premium Portfolio</h3>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Vanilla JS</span>
+              </div>
+              <p class="project-desc">A highly interactive, glassmorphic portfolio website showcasing advanced CSS
+                techniques and seamless scroll animations.</p>
+              <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card premium-card reveal delay-2">
+          <div class="card-content" style="padding: 0; display: flex; flex-direction: column; height: 100%;">
+            <div class="project-img-container">
+              <img src="project2.png" alt="Project 2" class="project-img">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">E-Commerce UI Concept</h3>
+              <div class="project-tags">
+                <span>Figma</span>
+                <span>UI/UX</span>
+                <span>Prototyping</span>
+              </div>
+              <p class="project-desc">A comprehensive UI/UX design prototype for a luxury e-commerce brand, focusing on
+                high conversion rates and fluid user flows.</p>
+              <a href="#" class="project-link">View Design <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card premium-card reveal delay-3">
+          <div class="card-content" style="padding: 0; display: flex; flex-direction: column; height: 100%;">
+            <div class="project-img-container">
+              <img src="project3.png" alt="Project 3" class="project-img">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Graphic Design Concept</h3>
+              <div class="project-tags">
+                <span>Photoshop</span>
+                <span>Illustrator</span>
+                <span>Premiere Pro</span>
+                <span>Branding</span>
+              </div>
+              <p class="project-desc">A modern and visually impactful graphic design project focused on digital creatives, video editing, and visual storytelling. Crafted with strong typography, cinematic editing, and creative compositions to deliver engaging and memorable visual experiences.</p>
+              <a href="#" class="project-link">View App <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container reveal">
+      <h2>Get In Touch</h2>
+
+      <div class="contact-container">
+        <div class="contact-info reveal delay-1">
+          <p>I'm currently open to new opportunities. Whether you have a question, a project proposal, or just want to
+            say hi, my inbox is always open.</p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>farzmuhd66@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Kerala, India</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form premium-card reveal delay-2" id="contactForm">
+          <div class="card-content">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+            <p id="msg" style="margin-top: 15px; color: var(--text-main); font-weight: 500;"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Farz. Designed & Built with passion.</p>
+    </div>
+  </footer>
+
+  <script src="indexpr1.js"></script>
+</body>
+
+</html>

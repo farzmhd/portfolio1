@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8a2be2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff007f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#030305;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1025;stop-opacity:1" />
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="30" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#grad2)" />
+  
+  <!-- Ambient Orbs -->
+  <circle cx="200" cy="150" r="180" fill="url(#grad1)" filter="url(#blur)" opacity="0.4"/>
+  <circle cx="650" cy="400" r="220" fill="url(#grad1)" filter="url(#blur)" opacity="0.3"/>
+  <circle cx="500" cy="100" r="120" fill="#ff007f" filter="url(#blur)" opacity="0.2"/>
+  
+  <!-- Glassmorphic Dashboard Mockup -->
+  <!-- Main Window -->
+  <rect x="150" y="100" width="500" height="300" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" style="backdrop-filter: blur(20px);" />
+  
+  <!-- Window Controls -->
+  <circle cx="175" cy="125" r="5" fill="#ff5f56" />
+  <circle cx="190" cy="125" r="5" fill="#ffbd2e" />
+  <circle cx="205" cy="125" r="5" fill="#27c93f" />
+  
+  <!-- Header Bar -->
+  <rect x="150" y="140" width="500" height="1" fill="rgba(255,255,255,0.1)" />
+  
+  <!-- Content Mockups inside Window -->
+  <!-- Sidebar -->
+  <rect x="170" y="160" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)" />
+  <rect x="170" y="195" width="90" height="12" rx="3" fill="rgba(255,255,255,0.08)" />
+  <rect x="170" y="215" width="100" height="12" rx="3" fill="rgba(255,255,255,0.08)" />
+  <rect x="170" y="235" width="80" height="12" rx="3" fill="rgba(255,255,255,0.08)" />
+  
+  <!-- Main Content Area -->
+  <rect x="320" y="160" width="300" height="100" rx="8" fill="url(#grad1)" opacity="0.8" />
+  <rect x="320" y="280" width="140" height="90" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" />
+  <rect x="480" y="280" width="140" height="90" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" />
+  
+  <!-- Overlay Pattern -->
+  <line x1="0" y1="0" x2="800" y2="500" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+  <line x1="800" y1="0" x2="0" y2="500" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+</svg>
