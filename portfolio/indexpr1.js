@@ -27,14 +27,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Navbar Scroll Effect ---
+    // --- Navbar Scroll & Scrollspy Effect ---
     const navbar = document.getElementById('navbar');
+    const sections = document.querySelectorAll('section');
+    const navItemLinks = document.querySelectorAll('.nav-links a');
+
     window.addEventListener('scroll', () => {
+        // Navbar shrink effect
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
+
+        // Scrollspy active link effect
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.scrollY >= sectionTop - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navItemLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
     });
 
     // --- Scroll Reveal using Intersection Observer ---
