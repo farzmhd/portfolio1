@@ -111,33 +111,64 @@ h2 {
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   position: relative;
   overflow: hidden;
   gap: 10px;
+  z-index: 1;
+}
+
+.btn i {
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .btn-primary {
-  background: var(--text-main);
-  color: var(--bg-color);
+  background: var(--gradient-primary);
+  color: #fff;
   border: none;
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, var(--color-accent-2), var(--color-accent-1));
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+  border-radius: inherit;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(138, 43, 226, 0.5);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:hover i {
+  transform: translateX(5px);
 }
 
 .btn-outline {
   background: transparent;
   color: var(--text-main);
-  border: 1px solid var(--border-light);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
 }
 
 .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
   border-color: var(--text-main);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline:hover i {
+  transform: translateX(5px);
 }
 
 /* Navbar */
@@ -339,6 +370,60 @@ h2 {
   color: var(--text-muted);
   font-size: 1.15rem;
   margin-bottom: 1.5rem;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.about-text:hover p {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.about-text p:hover {
+  color: var(--text-main);
+  transform: translateX(8px);
+}
+
+.about-text p.lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.about-text p.lead:hover {
+  color: var(--text-main);
+}
+
+.highlight {
+  position: relative;
+  font-weight: 700;
+  color: var(--color-accent-1);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.highlight:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 5px 15px rgba(138, 43, 226, 0.4));
+}
+
+.highlight:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* Skills Section */
@@ -454,6 +539,13 @@ h2 {
 .project-card {
   display: flex;
   flex-direction: column;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 40px rgba(138, 43, 226, 0.15);
+  border-color: rgba(138, 43, 226, 0.3);
 }
 
 .project-img-container {
@@ -464,15 +556,31 @@ h2 {
   border-radius: calc(var(--border-radius) - 2px) calc(var(--border-radius) - 2px) 0 0;
 }
 
+.project-img-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg-color) 0%, transparent 50%);
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-img-container::after {
+  opacity: 0.1;
+}
+
 .project-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+  filter: brightness(0.9) grayscale(20%);
 }
 
 .project-card:hover .project-img {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  filter: brightness(1.1) grayscale(0%);
 }
 
 .project-content {
@@ -507,6 +615,19 @@ h2 {
   border: 1px solid var(--border-light);
   padding: 0.4rem 1rem;
   border-radius: 100px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-tags span {
+  border-color: rgba(138, 43, 226, 0.3);
+  background: rgba(138, 43, 226, 0.05);
+}
+
+.project-tags span:hover {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: white;
+  transform: translateY(-2px);
 }
 
 .project-link {
@@ -518,10 +639,16 @@ h2 {
   gap: 0.5rem;
   transition: var(--transition);
   align-self: flex-start;
+  position: relative;
+}
+
+.project-card:hover .project-link {
+  color: var(--color-accent-1);
 }
 
 .project-link:hover {
   gap: 0.8rem;
+  color: var(--color-accent-2) !important;
 }
 
 /* Contact Section */
